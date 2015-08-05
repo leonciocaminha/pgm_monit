@@ -22,12 +22,11 @@
             <% (1..10).each do |row| %>
               <tr>
                 <th scope="row"><%= row %></th>
-                <td><%= ["Joefrey Nixxon", "Cidadão", "Chora bichão", "Amaral", "IPS", "Top Secret"].sample %></td>
+                <td><%= ["Joefrey Nixxon", "IPS", "Top Secret"].sample %></td>
                 <td><%= ["A vista", "Parcelado"].sample %></td>
                 <td><%= ["SEFIN", "PGM"].sample %></td>
                 <td><%= number_to_currency rand(1000..1000000) %></td>
               </tr>
-
             <% end %>
           </tbody>
         </table>

@@ -36,6 +36,9 @@ class MonitController < ApplicationController
   end
 
   def total_keeped
+    gon.series = [{
+
+    }]
   end
 
   def biggest_dealers
@@ -58,7 +61,7 @@ class MonitController < ApplicationController
           x: 4,
           y: 0,
           style: {
-            fontSize: '18px',
+            fontSize: '12px',
             fontFamily: 'Verdana, sans-serif'
           }
       }

@@ -1,3 +1,16 @@
 pt-BR:
+  index:
+    text1: Mutirão Fiscal 2015
+    text2: App para monitoramento em tempo real.
   chart:
     ammount_contrib: Quantidade de Contribuintes Atendidos
+    ammount_per_service: Quantidade de Atendimento por Serviço
+    reduction_percentual: Percentual de Redução de Processos de Execução Fiscal
+    total_keeped: Valores Arrecadados
+    biggest_dealers: Grandes Devedores negociados
+  menu:
+    ammount_contrib: Contribuintes Atendidos
+    ammount_per_service: Atendimento por Serviço
+    reduction_percentual: Percentual de Redução de Processos
+    total_keeped: Valores Arrecadados
+    biggest_dealers: Devedores negociados
