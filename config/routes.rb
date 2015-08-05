@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   get "monit/ammount_contrib"
+  get "monit/ammount_contrib"
+  get "monit/ammount_per_service"
+  get "monit/reduction_percentual"
+  get "monit/total_keeped"
+  get "monit/biggest_dealers"
+
   root 'monit#index'
 
   # Example of regular route:
