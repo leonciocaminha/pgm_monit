@@ -24,9 +24,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'twitter-bootstrap-rails', '~> 3.2.0'
 gem 'twitter-bootswatch-rails', '~> 3.3.4'
-gem 'twitter-bootswatch-rails-helpers'
-gem 'twitter-bootswatch-rails-fontawesome'
-gem "highcharts-rails", "~> 3.0.0"
+gem 'twitter-bootswatch-rails-helpers', '~> 3.3.2.0'
+gem 'twitter-bootswatch-rails-fontawesome', '~> 4.3.0.0'
+gem 'highcharts-rails', '~> 3.0.0'
+gem 'gon', '~> 6.0.1'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
