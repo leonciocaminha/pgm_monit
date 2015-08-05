@@ -1,0 +1,6 @@
+<%= stylesheet_link_tag "yeti", :media => "all" %>
+<%= stylesheet_link_tag "general" %>
+<%= javascript_include_tag "yeti" %>
+<%= Gon::Base.render_data %>
+<%= yield(:page_javascript) if content_for?(:page_javascript) %>
+<%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>

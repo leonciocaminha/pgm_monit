@@ -1,0 +1,34 @@
+<%= render partial: "layouts/chart_layout", locals: { chart_name: t("chart.ammount_per_service") } %>
+
+<script type="text/javascript">
+  $(function () {
+      $('#container').highcharts({
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              categories: gon.categories,
+              crosshair: true
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Quantidade'
+              }
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0
+              }
+          },
+          series: gon.series
+      });
+  });
+</script>
