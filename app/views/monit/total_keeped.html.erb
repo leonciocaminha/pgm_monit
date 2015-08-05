@@ -1,0 +1,60 @@
+<%= render partial: "layouts/chart_layout", locals: { chart_name: t("chart.total_keeped") } %>
+
+<script type="text/javascript">
+  $(function () {
+      $('#container').highcharts({
+
+          chart: {
+              type: 'column'
+          },
+
+          title: {
+              text: ''
+          },
+
+          xAxis: {
+              categories: gon.categories
+          },
+
+          yAxis: {
+              allowDecimals: false,
+              min: 0,
+              title: {
+                  text: 'Quantidade'
+              }
+          },
+
+          tooltip: {
+              formatter: function () {
+                  return '<b>' + this.x + '</b><br/>' +
+                      this.series.name + ': ' + this.y + '<br/>' +
+                      'Total: ' + this.point.stackTotal;
+              }
+          },
+
+          plotOptions: {
+              column: {
+                  stacking: 'normal'
+              }
+          },
+
+          series: [{
+              name: 'A Vista (SEFIN)',
+              data: [5, 3, 4, 7, 2],
+              stack: 'male'
+          }, {
+              name: 'Parcelado (SEFIN)',
+              data: [3, 4, 4, 2, 5],
+              stack: 'male'
+          }, {
+              name: 'A Vista (PGM)',
+              data: [2, 5, 6, 2, 1],
+              stack: 'female'
+          }, {
+              name: 'Parcelado (PGM)',
+              data: [3, 0, 4, 4, 3],
+              stack: 'female'
+          }]
+      });
+  });
+</script>

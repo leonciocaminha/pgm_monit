@@ -1,0 +1,42 @@
+<%= render partial: "layouts/chart_layout", locals: { chart_name: t("chart.reduction_percentual") } %>
+
+<script type="text/javascript">
+  $(function () {
+      $('#container').highcharts({
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              categories: gon.categories,
+              crosshair: true
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Quantidade'
+              }
+          },
+          tooltip: {
+              headerFormat: '<span style="font-size:14px">{point.key}</span><table>',
+              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                  '<td style="padding:0"><b>{point.y:.1f} atendimentos</b></td></tr>',
+              footerFormat: '</table>',
+              shared: true,
+              useHTML: true
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0
+              }
+          },
+          series: gon.series
+      });
+  });
+</script>
